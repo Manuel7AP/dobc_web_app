@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %} Add Guest {% endblock %}
+
+{% block body %}
+	<form method="POST" action="/guests/create">
+		{{ add_guest_form.name.label }}: {{ add_guest_form.name }}
+		{{ add_guest_form.message.label }}: {{ add_guest_form.message }}
+		<input type="submit">
+	</form>
+
+{% endblock %}
